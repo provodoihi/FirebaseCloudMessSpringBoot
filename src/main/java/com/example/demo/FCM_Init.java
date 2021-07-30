@@ -17,7 +17,7 @@ public class FCM_Init {
 	@PostConstruct
     public void init() throws FileNotFoundException {
         try {
-        	String path = "C:\\Users\\Chae Young\\Documents\\test_firebase\\src\\main\\resources\\agoraapp-d0c80-firebase-adminsdk-zt7so-383a86bac5.json";
+        	String path = "C:\\Users\\Chae Young\\Documents\\test_firebase\\src\\main\\resources\\firebase.json";
         	FileInputStream inputStream = new FileInputStream(path);
             FirebaseOptions options = FirebaseOptions.builder()
                     .setCredentials(GoogleCredentials.fromStream(inputStream))

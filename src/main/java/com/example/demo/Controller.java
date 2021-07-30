@@ -16,8 +16,12 @@ public class Controller {
 	@Autowired
 	private FCM_Service fcm_Service;
 	
+	private java.util.logging.Logger logger =  java.util.logging.Logger.getLogger(this.getClass().getName());
+	
 	@PostMapping("/api")
 	public Map<String, String> sendNotification(@RequestBody MessageRequest messageRequest) {
+		logger.info("Send to token: " + messageRequest.getToken());
+		logger.info("Message: " + messageRequest.getMessage());
 		return Collections.singletonMap("response", fcm_Service.pushNotification(messageRequest));
 	}
 }

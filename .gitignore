@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ### Firebase ###
-/src/main/resources/agoraapp-d0c80-firebase-adminsdk-zt7so-383a86bac5.json
+/src/main/resources/firebase.json
